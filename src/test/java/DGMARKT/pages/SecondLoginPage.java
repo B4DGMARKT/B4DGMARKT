@@ -25,7 +25,8 @@ public class SecondLoginPage extends BasePage {
     @FindBy(xpath = "//span[text() = 'Login']")
     public WebElement loginButton;
 
-    @FindBy(xpath = "//i[@class='fa fa-check-circle']/..")
+    //@FindBy(xpath = "//i[@class='fa fa-check-circle']/..")
+    @FindBy(xpath = "//button[text()='×']")
     public WebElement successMessage;
 
     public void loginMain(){
@@ -37,9 +38,5 @@ public class SecondLoginPage extends BasePage {
 
     }
 
-
-    public String successMessage(){
-        return  Driver.get().findElement(By.xpath("//i[@class='fa fa-check-circle']/..")).getText();
-    }
 
 }

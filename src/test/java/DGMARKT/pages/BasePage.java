@@ -11,7 +11,7 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.get(), this);
 
     }
-        public void navigateTo(String module, String tab) {
+        public void navigatetoMyAccount(String module, String tab) {
             BrowserUtils.waitFor(2);
             Driver.get().findElement(By.xpath("//span[text()='" + module + "']")).click();
             BrowserUtils.waitFor(2);
@@ -19,4 +19,11 @@ public abstract class BasePage {
             BrowserUtils.waitFor(1);
 
     }
+
+
+
+
+
+
+
 }

@@ -2,6 +2,7 @@ package DGMARKT.stepDefs;
 
 import DGMARKT.pages.FirstLoginPage;
 import DGMARKT.pages.SecondLoginPage;
+import DGMARKT.utilities.BrowserUtils;
 import DGMARKT.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,7 +21,7 @@ public class LoginStepDefs {
 
     @When("the user navigates to {string} module {string} tab")
     public void the_user_clicks_the_link_under_menu(String myAccountMenu, String loginLink) {
-        secondLoginPage.navigateTo(myAccountMenu, loginLink);
+        secondLoginPage.navigatetoMyAccount(myAccountMenu, loginLink);
     }
 
     @When("The user enters the personal username and password")
@@ -31,7 +32,9 @@ public class LoginStepDefs {
 
     @Then("The user should be on the dashboard page and can see the {string} success message")
     public void the_user_should_be_on_the_dashboard_page_and_can_see_the_success_message(String expectedSuccessMessage) {
-        Assert.assertEquals(expectedSuccessMessage, secondLoginPage.successMessage());
+        System.out.println("secondLoginPage.successMessage.getText() = " + secondLoginPage.successMessage.getText().trim());
+        BrowserUtils.waitFor(2);
+        Assert.assertEquals(expectedSuccessMessage, secondLoginPage.successMessage.getText());
     }
 
 
