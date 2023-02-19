@@ -32,7 +32,7 @@ public class LoginStepDefs {
 
     @Then("The user should be on the dashboard page and can see the {string} success message")
     public void the_user_should_be_on_the_dashboard_page_and_can_see_the_success_message(String expectedSuccessMessage) {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(1);
         Assert.assertEquals(expectedSuccessMessage, secondLoginPage.successMessage.getText());
     }
 
