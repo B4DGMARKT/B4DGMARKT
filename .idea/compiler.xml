@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="DGMARKT" />
         <module name="B4DGMARKT" />
+        <module name="B4DGMAUT" />
       </profile>
     </annotationProcessing>
   </component>
