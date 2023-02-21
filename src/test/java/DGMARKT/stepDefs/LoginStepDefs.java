@@ -21,7 +21,7 @@ public class LoginStepDefs {
 
     @When("the user navigates to {string} module {string} tab")
     public void the_user_clicks_the_link_under_menu(String myAccountMenu, String loginLink) {
-        secondLoginPage.navigatetoMyAccount(myAccountMenu, loginLink);
+        secondLoginPage.navigatetoMyAccountDropdownMenu(myAccountMenu, loginLink);
     }
 
     @When("The user enters the personal username and password")
