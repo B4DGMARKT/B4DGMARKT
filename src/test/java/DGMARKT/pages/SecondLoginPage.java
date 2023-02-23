@@ -25,6 +25,15 @@ public class SecondLoginPage extends BasePage {
     @FindBy(xpath = "//span[text() = 'Login']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//a[text() = 'Logout']")
+    public WebElement logoutLink;
+
+    @FindBy(xpath = "//h2[text()='Account Logout']")
+    public WebElement LogoutText;
+
+    @FindBy(xpath = "(//span[text()='Continue'])[2]")
+    public WebElement ContinueButton;
+
     //@FindBy(xpath = "//i[@class='fa fa-check-circle']/..")
     @FindBy(xpath = "//button[text()='×']")
     public WebElement successMessage;
@@ -35,7 +44,12 @@ public class SecondLoginPage extends BasePage {
         passwordInputBox.sendKeys(ConfigurationReader.get("mainpassword"));
         BrowserUtils.waitFor(1);
         loginButton.click();
+    }
 
+    public boolean loginLinkIsVisible(String Menu){
+        Driver.get().findElement(By.xpath("//span[text()='" + Menu + "']")).click();
+        BrowserUtils.waitFor(1);
+        return loginLink.isDisplayed();
     }
 
 

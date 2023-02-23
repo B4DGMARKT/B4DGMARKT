@@ -13,7 +13,6 @@ public class LoginStepDefs {
     FirstLoginPage firstLoginPage = new FirstLoginPage();
     SecondLoginPage secondLoginPage = new SecondLoginPage();
 
-
     @Then("The user should be on the main page and can see the {string} text as title")
     public void the_user_should_be_on_the_main_page_and_can_see_the_text_as_title(String expectedTitle) {
         Assert.assertEquals(expectedTitle, Driver.get().getTitle());
@@ -36,6 +35,7 @@ public class LoginStepDefs {
         Assert.assertEquals(expectedSuccessMessage, secondLoginPage.successMessage.getText());
 
         secondLoginPage.successMessage.click();
+        BrowserUtils.waitFor(2);
     }
 
 
