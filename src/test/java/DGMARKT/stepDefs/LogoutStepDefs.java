@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
-public class LogoutStepdefs {
+public class LogoutStepDefs {
     FirstLoginPage firstLoginPage = new FirstLoginPage();
     SecondLoginPage secondLoginPage = new SecondLoginPage();
 
