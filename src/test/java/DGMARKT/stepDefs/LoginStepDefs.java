@@ -34,6 +34,8 @@ public class LoginStepDefs {
     public void the_user_should_be_on_the_dashboard_page_and_can_see_the_success_message(String expectedSuccessMessage) {
         BrowserUtils.waitFor(1);
         Assert.assertEquals(expectedSuccessMessage, secondLoginPage.successMessage.getText());
+
+        secondLoginPage.successMessage.click();
     }
 
 
