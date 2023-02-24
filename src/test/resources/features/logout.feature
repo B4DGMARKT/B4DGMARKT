@@ -14,6 +14,7 @@ When The user navigates to "My Account" module "Logout" tab
 Then The user can see the "Login" link under the "My Account" menu
 
   # Users Story : As a user, I should be able to log out
+  # ok
   # Acceptance Criteria :
   # 1-Verify that the user has securely terminated the session
 
