@@ -9,9 +9,10 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
+
+
 public class LogoutStepDefs {
-    FirstLoginPage firstLoginPage = new FirstLoginPage();
-    SecondLoginPage secondLoginPage = new SecondLoginPage();
+     SecondLoginPage secondLoginPage = new SecondLoginPage();
 
     /* the followıng pre steps are in logınStepDefs
 
@@ -36,6 +37,7 @@ public class LogoutStepDefs {
         Driver.get().findElement(By.xpath("//a[text()='" + LogoutLink + "']")).click();
         BrowserUtils.waitFor(2);
         secondLoginPage.ContinueButton.click();
+
         //secondLoginPage.navigatetoMyAccount(myAccountMenu, LogoutLink);
 
     }
@@ -45,7 +47,11 @@ public class LogoutStepDefs {
         // BrowserUtils.waitFor(2);
         //  Driver.get().findElement(By.xpath("//span[text()='" + myAccountMenu + "']")).click();
         BrowserUtils.waitFor(3);
-        boolean visible = secondLoginPage.loginLinkIsVisible(myAccountMenu);
-        Assert.assertEquals(true, visible);
+        Assert.assertEquals(true, secondLoginPage.loginLinkIsVisible(myAccountMenu));
+    }
+
+    @When("The user navigates to back in the browser")
+    public void the_user_navigates_to_back_in_the_browser() {
+        Driver.navigateToBack();
     }
 }
