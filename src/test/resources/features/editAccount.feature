@@ -26,10 +26,13 @@ Feature: As a user, I should be able to  update My Account module.
     Then Verify that the user received an error message
 
     Examples:
-      | firstname | lastname | email          | telephone |
-      |           | arslan   | hal1@gmail.com | 123456789 |
-      | halil     |          | hal1@gmail.com | 123456789 |
-
+      | firstname | lastname                          | email          | telephone                         |
+      |           | arslan                            | hal1@gmail.com | 123456789                         |
+      | halil     |                                   | hal1@gmail.com | 123456789                         |
+      | halil     | 123456789012345678901234567890123 | hal1@gmail.com | 123456789                         |
+      | halil     | arslan                            |                | 123456789                         |
+      | halil     | arslan                            | hal1gmail.com  | 123456789                         |
+      | halil     | arslan                            | hal1@gmail.com | 123456789012345678901234567890123 |
 
 
 
