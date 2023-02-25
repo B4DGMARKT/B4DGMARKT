@@ -7,18 +7,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-
 public class editAccountStepDefs {
     EditPage editPage = new EditPage();
-
 
     @Given("the user clicks myAccount and edit account button")
     public void theUserClicksMyAccountAndEditAccountButton() {
         editPage.myAccountBtn.click();
         editPage.editAccountBtn.click();
     }
-
-
 
     @And("The user enters new firstname in {string} field")
     public void theUserEntersNewFirstnameInField(String firstNameField) {
