@@ -1,6 +1,8 @@
 package DGMARKT.stepDefs;
 
+import DGMARKT.pages.BasePage;
 import DGMARKT.pages.FirstLoginPage;
+import DGMARKT.pages.SecondLoginPage;
 import DGMARKT.utilities.ConfigurationReader;
 import DGMARKT.utilities.Driver;
 import io.cucumber.java.After;
@@ -12,7 +14,8 @@ import org.openqa.selenium.TakesScreenshot;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
-    FirstLoginPage firstLoginPage=new FirstLoginPage();
+    FirstLoginPage firstLoginPage = new FirstLoginPage();
+
     @Before
     public void setup() throws InterruptedException {
         Driver.get().get(ConfigurationReader.get("url"));
@@ -24,10 +27,10 @@ public class Hooks {
 
     @After
     public void tearDown(Scenario scenario) {
-/*        if (scenario.isFailed()) {
+        if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "screenshot");
-        }*/
+        }
         Driver.closeDriver();
     }
 }

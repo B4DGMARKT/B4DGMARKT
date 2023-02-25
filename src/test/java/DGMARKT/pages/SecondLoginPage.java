@@ -25,11 +25,10 @@ public class SecondLoginPage extends BasePage {
     @FindBy(xpath = "//span[text() = 'Login']")
     public WebElement loginButton;
 
-    //@FindBy(xpath = "//i[@class='fa fa-check-circle']/..")
     @FindBy(xpath = "//button[text()='×']")
     public WebElement successMessage;
 
-    public void loginMain(){
+    public void loginMain() {
         usernameInputBox.sendKeys(ConfigurationReader.get("mainusername"));
         BrowserUtils.waitFor(1);
         passwordInputBox.sendKeys(ConfigurationReader.get("mainpassword"));

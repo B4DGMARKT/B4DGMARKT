@@ -1,5 +1,6 @@
 package DGMARKT.pages;
 
+import DGMARKT.utilities.BrowserUtils;
 import DGMARKT.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -55,7 +56,7 @@ public class CheckoutPage extends BasePage {
     @FindBy(xpath = "//h1[text()='Your order has been placed!']")
     public WebElement placedOrderMessage;
 
-    public void fillingCheckoutOptions(String billingDetails, String deliveryDetails, String deliveryMethod, String paymentMethod, String confirmOrder){
+    public void fillingCheckoutOptions(String billingDetails, String deliveryDetails, String deliveryMethod, String paymentMethod, String confirmOrder) {
         WebElement billingDetailsMenu = Driver.get().findElement(By.xpath("//a[contains(text(),'Step 2: " + billingDetails + " ')]"));
         billingDetailsMenu.click();
         billingDetailsMenu.click();
@@ -83,7 +84,7 @@ public class CheckoutPage extends BasePage {
         confirmButton.click();
     }
 
-    public String orderSuccess(){
+    public String orderSuccess() {
         return Driver.get().findElement(By.xpath("//h1[text()='Your order has been placed!']")).getText();
     }
 

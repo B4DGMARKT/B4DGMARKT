@@ -44,17 +44,27 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//input[@id='text-search']")
     public WebElement searchFunctionField;
 
+    @FindBy(xpath = "//button[@id='btn-search-category']")
+    public WebElement searchButtoninSearch;
+    @FindBy(xpath = "(//*[@id=\"content\"]/div[3]/div[1])/div/div/div/div/a/img")
+    public WebElement firstProductinSearch;
+
+    @FindBy(xpath = "//p[contains(text(),'There is no product that matches the search criter')]")
+    public WebElement noProductText;
+
+
 
 
     public void currencySelection(String currencyType) {
-        currencyMenu.click();
+        BrowserUtils.clickWithJS(currencyMenu);
         WebElement currencyTypes = Driver.get().findElement(By.xpath("//button[text()='" + currencyType + "']"));
         currencyTypes.click();
     }
 
     public void productSelection(String productName) {
+        Driver.get().navigate().refresh();
         WebElement product = Driver.get().findElement(By.xpath("//a[text()='" + productName + "']"));
-        product.click();
+        BrowserUtils.clickWithJS(product);
     }
 
     public String costAndCurrency(String price) {
@@ -76,10 +86,9 @@ public class DashboardPage extends BasePage {
         checkoutButton.click();
     }
 
+
     public void searchIcon(){
-        Driver.get().findElement((By) searchIcon).click();
+        searchIcon.click();
     }
-
-
 
 }
