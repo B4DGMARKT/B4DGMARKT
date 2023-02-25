@@ -13,6 +13,7 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.get(), this);
 
     }
+<<<<<<< HEAD
     @FindBy(css = "#input-email")
     public WebElement loginEmail;
 
@@ -37,6 +38,15 @@ public abstract class BasePage {
 
 
 
+=======
+>>>>>>> master
 
+    public void navigatetoMyAccount(String module, String tab) {
+        BrowserUtils.waitFor(2);
+        Driver.get().findElement(By.xpath("//span[text()='" + module + "']")).click();
+        BrowserUtils.waitFor(2);
+        Driver.get().findElement(By.xpath("//*[text()='" + tab + "']")).click();
+        BrowserUtils.waitFor(1);
 
+    }
 }

@@ -39,14 +39,15 @@ public class DashboardPage extends BasePage {
     public WebElement checkoutBtn;
 
     public void currencySelection(String currencyType) {
-        currencyMenu.click();
+        BrowserUtils.clickWithJS(currencyMenu);
         WebElement currencyTypes = Driver.get().findElement(By.xpath("//button[text()='" + currencyType + "']"));
         currencyTypes.click();
     }
 
     public void productSelection(String productName) {
+        Driver.get().navigate().refresh();
         WebElement product = Driver.get().findElement(By.xpath("//a[text()='" + productName + "']"));
-        product.click();
+        BrowserUtils.clickWithJS(product);
     }
 
     public String costAndCurrency(String price) {
@@ -67,6 +68,4 @@ public class DashboardPage extends BasePage {
         WebElement checkoutButton = Driver.get().findElement(By.xpath("//strong[text()='" + checkout + "']"));
         checkoutButton.click();
     }
-
-
 }
