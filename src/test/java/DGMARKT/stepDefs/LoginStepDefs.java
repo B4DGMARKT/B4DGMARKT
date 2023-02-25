@@ -25,7 +25,6 @@ public class LoginStepDefs {
 
     @When("The user enters the personal username and password")
     public void the_user_enters_the_personal_username_and_password() {
-
         secondLoginPage.loginMain();
     }
 
@@ -37,6 +36,5 @@ public class LoginStepDefs {
         secondLoginPage.successMessage.click();
         BrowserUtils.waitFor(2);
     }
-
 
 }
