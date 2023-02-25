@@ -1,6 +1,6 @@
 package DGMARKT.stepDefs;
 
-import DGMARKT.pages.FirstLoginPage;
+
 import DGMARKT.pages.SecondLoginPage;
 import DGMARKT.utilities.BrowserUtils;
 import DGMARKT.utilities.Driver;
