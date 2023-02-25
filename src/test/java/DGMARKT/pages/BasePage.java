@@ -10,6 +10,7 @@ public abstract class BasePage {
 
         PageFactory.initElements(Driver.get(), this);
 
+
     }
 
     public void navigatetoMyAccount(String module, String tab) {
