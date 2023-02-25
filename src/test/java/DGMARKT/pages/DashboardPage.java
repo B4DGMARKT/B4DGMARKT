@@ -52,7 +52,11 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'There is no product that matches the search criter')]")
     public WebElement noProductText;
 
+    @FindBy(xpath = "//span[.='My Account']")
+    public WebElement myAccountMenu;
 
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right pt-account']//a[normalize-space()='My Account']")
+    public WebElement sectionMyAccount;
 
 
     public void currencySelection(String currencyType) {
@@ -89,6 +93,11 @@ public class DashboardPage extends BasePage {
 
     public void searchIcon(){
         searchIcon.click();
+    }
+
+    public void myAccountMenu(){
+        myAccountMenu.click();
+        sectionMyAccount.click();
     }
 
 }
