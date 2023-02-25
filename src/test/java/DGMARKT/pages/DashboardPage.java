@@ -38,6 +38,14 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//strong[text()=' Checkout']")
     public WebElement checkoutBtn;
 
+    @FindBy(xpath = "//div[@class='dropdown-toggle search-button']")
+    public WebElement searchIcon;
+
+    @FindBy(xpath = "//input[@id='text-search']")
+    public WebElement searchFunctionField;
+
+
+
     public void currencySelection(String currencyType) {
         currencyMenu.click();
         WebElement currencyTypes = Driver.get().findElement(By.xpath("//button[text()='" + currencyType + "']"));
@@ -67,6 +75,11 @@ public class DashboardPage extends BasePage {
         WebElement checkoutButton = Driver.get().findElement(By.xpath("//strong[text()='" + checkout + "']"));
         checkoutButton.click();
     }
+
+    public void searchIcon(){
+        Driver.get().findElement((By) searchIcon).click();
+    }
+
 
 
 }

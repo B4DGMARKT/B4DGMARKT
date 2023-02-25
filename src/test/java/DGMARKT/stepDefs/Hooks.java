@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class Hooks {
     FirstLoginPage firstLoginPage=new FirstLoginPage();
     @Before
-    public void setup() {
+    public void setup() throws InterruptedException {
         Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
