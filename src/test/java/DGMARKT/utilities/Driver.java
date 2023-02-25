@@ -69,8 +69,6 @@ public class Driver {
             driver = null;
         }
     }
-    public static void navigateToBack() {
-        driver.navigate().back();
-    }
+
 }
 

@@ -52,6 +52,6 @@ public class LogoutStepDefs {
 
     @When("The user navigates to back in the browser")
     public void the_user_navigates_to_back_in_the_browser() {
-        Driver.navigateToBack();
+       Driver.get().navigate().back();
     }
 }

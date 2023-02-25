@@ -11,5 +11,8 @@
         <module name="B4DGMAUT" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="B4DGMAUT" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>
