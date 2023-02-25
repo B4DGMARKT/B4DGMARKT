@@ -39,7 +39,6 @@ public class EditPage extends BasePage{
         System.out.println("newFirstName = " + newFirstName);
         BrowserUtils.waitFor(2);
 
-
     }
 
     public void editLastName(String lastNameField) {
@@ -49,7 +48,6 @@ public class EditPage extends BasePage{
         infoField.sendKeys(newLastName);
         System.out.println("newLastName = " + newLastName);
         BrowserUtils.waitFor(2);
-
 
     }
 
@@ -62,7 +60,6 @@ public class EditPage extends BasePage{
         System.out.println("newEmail = " + newEmail);
         BrowserUtils.waitFor(2);
 
-
     }
 
     public void editTelephone(String telephoneField) {
@@ -73,7 +70,6 @@ public class EditPage extends BasePage{
         System.out.println("newTelephone = " + newTelephone);
         BrowserUtils.waitFor(2);
 
-
     }
 
     public void editInformation(String info, String field) {
@@ -83,14 +79,6 @@ public class EditPage extends BasePage{
         BrowserUtils.waitFor(2);
     }
 
-    public void loginMforEdit() {
-        navigatetoMyAccountDropdownMenu("My Account", "Login");
-        loginEmail.sendKeys(ConfigurationReader.get("userEmailForEdit"));
-        BrowserUtils.waitFor(1);
-        loginPassword.sendKeys(ConfigurationReader.get("userPasswordForEdit"));
-        BrowserUtils.waitFor(1);
-        loginButton.click();
-    }
     public void loginforEdit(String email,String password){
         navigatetoMyAccountDropdownMenu("My Account", "Login");
         loginEmail.sendKeys(ConfigurationReader.get(email));
@@ -98,15 +86,11 @@ public class EditPage extends BasePage{
         loginPassword.sendKeys(ConfigurationReader.get(password));
         BrowserUtils.waitFor(1);
         loginButton.click();
-
     }
 
     public void verifyErrorMessageForEdit() {
         WebElement email = Driver.get().findElement(By.xpath("//input[@type='email']"));
-        //System.out.println("email.getAttribute(\"validationMessage\") = " + email.getAttribute("validationMessage")); (html uyarisinn ciktisinin yazdirilmasi icin kullanilan kod)
-        boolean control = email.getAttribute("validationMessage").equals("Die E-Mail-Adresse muss ein @-Zeichen enthalten. In der Angabe \"hal1gmail.com\" fehlt ein @-Zeichen.")
-                || email.getAttribute("validationMessage").equals("Please include an '@' in the email address. 'hal1gmail.com' is missing an '@'.")
-                || email.getAttribute("validationMessage").equals("Lütfen e-posta adresine bir \"@\" işareti ekleyin. \"zehraemirgmail.com\" adresinde \"@\" eksik.");
+               boolean control = email.getAttribute("validationMessage").equals("Please include an '@' in the email address. 'hal1gmail.com' is missing an '@'.");
         if (control) {
             Assert.assertTrue(control);
         } else {

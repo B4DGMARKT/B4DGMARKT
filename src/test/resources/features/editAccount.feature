@@ -14,7 +14,6 @@ Feature: As a user, I should be able to  update My Account module.
     And The user clicks Continue Button
     Then Verify that the user received a success alert
 
-
   @US08_2
   Scenario Outline: Verify that the error message is displayed when the filed is filled by user incorrectly
     Given the user clicks myAccount and edit account button
