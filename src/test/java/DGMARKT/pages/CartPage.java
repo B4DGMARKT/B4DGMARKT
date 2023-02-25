@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CartPage {
-    // test
+    // test 2
     @FindBy(xpath = "//span[text()='Category']")
     WebElement CategoryLınk;
 
