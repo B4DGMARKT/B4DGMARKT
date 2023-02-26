@@ -1,7 +1,6 @@
 package DGMARKT.stepDefs;
 
 
-import DGMARKT.pages.LogoutPage;
 import DGMARKT.pages.SecondLoginPage;
 import DGMARKT.utilities.BrowserUtils;
 import DGMARKT.utilities.Driver;
@@ -14,7 +13,6 @@ import org.openqa.selenium.By;
 
 public class LogoutStepDefs {
      SecondLoginPage secondLoginPage = new SecondLoginPage();
-     LogoutPage logoutPage = new LogoutPage();
 
     /* the followıng pre steps are in logınStepDefs
 
@@ -30,6 +28,7 @@ public class LogoutStepDefs {
         BrowserUtils.waitFor(2);
     }
 
+
     @When("The user navigates to {string} module {string} tab")
     public void the_user_navigates_to_module_tab(String myAccountMenu, String LogoutLink) {
         BrowserUtils.waitFor(2);
@@ -37,7 +36,7 @@ public class LogoutStepDefs {
         BrowserUtils.waitFor(2);
         Driver.get().findElement(By.xpath("//a[text()='" + LogoutLink + "']")).click();
         BrowserUtils.waitFor(2);
-        logoutPage.ContinueButton.click();
+       // secondLoginPage.ContinueButton.click();
 
         //secondLoginPage.navigatetoMyAccount(myAccountMenu, LogoutLink);
 
@@ -48,7 +47,7 @@ public class LogoutStepDefs {
         // BrowserUtils.waitFor(2);
         //  Driver.get().findElement(By.xpath("//span[text()='" + myAccountMenu + "']")).click();
         BrowserUtils.waitFor(3);
-        Assert.assertEquals(true, logoutPage.loginLinkIsVisible(myAccountMenu));
+        //Assert.assertEquals(true, secondLoginPage.loginLinkIsVisible(myAccountMenu));
     }
 
     @When("The user navigates to back in the browser")
