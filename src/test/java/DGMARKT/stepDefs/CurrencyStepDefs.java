@@ -18,7 +18,7 @@ public class CurrencyStepDefs {
 
     @Given("The user navigates to {string} module {string} tab  and user should be logged and on the dashboard page")
     public void theUserNavigatesToModuleTabAndUserShouldBeLoggedAndOnTheDashboardPage(String module, String tab) {
-        secondLoginPage.navigatetoMyAccount(module, tab);
+        secondLoginPage.navigatetoMyAccountDropdownMenu(module, tab);
         BrowserUtils.waitFor(1);
         secondLoginPage.loginMain();
     }

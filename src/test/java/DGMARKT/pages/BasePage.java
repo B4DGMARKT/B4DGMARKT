@@ -12,7 +12,7 @@ public abstract class BasePage {
 
     }
 
-    public void navigatetoMyAccount(String module, String tab) {
+    public void navigatetoMyAccountDropdownMenu(String module, String tab) {
         BrowserUtils.waitFor(2);
         Driver.get().findElement(By.xpath("//span[text()='" + module + "']")).click();
         BrowserUtils.waitFor(2);
