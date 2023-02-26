@@ -18,16 +18,19 @@ public class editAccountStepDefs {
 
     @And("The user enters new firstname in {string} field")
     public void theUserEntersNewFirstnameInField(String firstNameField) {
+
         editPage.editFirstName(firstNameField);
     }
 
     @And("The user enters new lastname in {string} field")
     public void theUserEntersNewLastnameInField(String lastNameField) {
+
         editPage.editLastName(lastNameField);
     }
 
     @And("The user enters new email in {string} field")
     public void theUserEntersNewEmailInField(String emailField) {
+
         editPage.editEmail(emailField);
     }
 
@@ -38,6 +41,7 @@ public class editAccountStepDefs {
 
     @When("The user enters {string} in {string} field")
     public void theUserEntersInField(String newInput, String field) {
+
         editPage.editInformation(newInput, field);
     }
 
@@ -46,10 +50,6 @@ public class editAccountStepDefs {
     public void the_user_clicks_Continue_Button() {
 
         editPage.continueBtnEditInfo.click();
-       // WebElement email = Driver.get().findElement(By.xpath("//input[@type='email']"));
-       // System.out.println(email.getAttribute("validationMessage"));
-
-
     }
 
     @Then("Verify that the user received a success alert")
@@ -58,12 +58,9 @@ public class editAccountStepDefs {
 
     }
 
-
     @And("Verify that the user received an error message")
     public void verifyThatTheUserReceivedAnErrorMessage() {
         editPage.verifyErrorMessageForEdit();
-
-
     }
 
     @Given("the user should be able to login with {string} and {string}")
