@@ -5,6 +5,7 @@ Feature: Logout Functionality
 
   #  Test case : User can log out by clickıng the logout link under the My Account menu
 
+
   Scenario:  User can log out by clickıng the logout link under the My Account menu
     Then The user should be on the main page and can see the "Your Store" text as title
     And the user navigates to "My Account" module "Login" tab

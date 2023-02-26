@@ -30,7 +30,6 @@ public class LogoutStepDefs {
         BrowserUtils.waitFor(2);
     }
 
-
     @When("The user navigates to {string} module {string} tab")
     public void the_user_navigates_to_module_tab(String myAccountMenu, String LogoutLink) {
         BrowserUtils.waitFor(2);
