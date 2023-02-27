@@ -29,3 +29,4 @@ Feature: Currency Functionality of Dgmarkt
       | € Euro           |
       | £ Pound Sterling |
       | $ US Dollar      |
+
