@@ -1,6 +1,6 @@
 Feature: Login Functionality
 
-  @wip
+   @wip
   Scenario: User should be able to login with valid credentials
     Then The user should be on the main page and can see the "Your Store" text as title
     When the user navigates to "My Account" module "Login" tab
