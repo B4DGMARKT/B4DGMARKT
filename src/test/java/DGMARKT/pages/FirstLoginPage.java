@@ -21,11 +21,14 @@ public class FirstLoginPage extends BasePage {
     @FindBy(xpath = "//a[text()='Close']")
     public WebElement closePopUp;
 
-    public void firstLogin() {
+    public void firstLogin() throws InterruptedException {
         firstEmailInputBox.sendKeys(ConfigurationReader.get("firstemail"));
         firstPasswordInputBox.sendKeys(ConfigurationReader.get("firstpassword"));
         firstLoginButton.click();
+
+        Thread.sleep(2000);
         popUp.click();
+
         closePopUp.click();
     }
     public void loginPanelM(){
