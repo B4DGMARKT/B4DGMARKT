@@ -3,17 +3,18 @@ package DGMARKT.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CartPage {
+public class CartPage extends BasePage{
     // test 2
     @FindBy(xpath = "//span[text()='Category']")
-    WebElement CategoryLınk;
+    public WebElement CategoryLink;
 
     @FindBy(xpath = "//span[text()='Health & Beauty']")
-    WebElement HealthBeautyCategory;
+    public WebElement HealthBeautyCategory;
 
     @FindBy(xpath = "//a[text()='BaByliss 3663U - Hair rollers']")
-    WebElement product1;
+    public WebElement product1;
 
     @FindBy(xpath= "//button[text()='Add to Cart']")
-    WebElement addToCartButton;
+    public WebElement addToCartButton;
 }
+

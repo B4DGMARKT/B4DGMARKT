@@ -38,6 +38,23 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//strong[text()=' Checkout']")
     public WebElement checkoutBtn;
 
+    @FindBy(xpath = "//div[@class='dropdown-toggle search-button']")
+    public WebElement searchIcon;
+
+    @FindBy(xpath = "//input[@id='text-search']")
+    public WebElement searchFunctionField;
+
+    @FindBy(xpath = "//button[@id='btn-search-category']")
+    public WebElement searchButtoninSearch;
+    @FindBy(xpath = "(//*[@id=\"content\"]/div[3]/div[1])/div/div/div/div/a/img")
+    public WebElement firstProductinSearch;
+
+    @FindBy(xpath = "//p[contains(text(),'There is no product that matches the search criter')]")
+    public WebElement noProductText;
+
+
+
+
     public void currencySelection(String currencyType) {
         BrowserUtils.clickWithJS(currencyMenu);
         WebElement currencyTypes = Driver.get().findElement(By.xpath("//button[text()='" + currencyType + "']"));
@@ -68,4 +85,10 @@ public class DashboardPage extends BasePage {
         WebElement checkoutButton = Driver.get().findElement(By.xpath("//strong[text()='" + checkout + "']"));
         checkoutButton.click();
     }
+
+
+    public void searchIcon(){
+        searchIcon.click();
+    }
+
 }

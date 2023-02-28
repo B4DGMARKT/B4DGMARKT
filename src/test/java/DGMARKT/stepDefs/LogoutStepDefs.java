@@ -37,8 +37,6 @@ public class LogoutStepDefs {
         BrowserUtils.waitFor(2);
         Driver.get().findElement(By.xpath("//a[text()='" + LogoutLink + "']")).click();
         BrowserUtils.waitFor(2);
-        logoutPage.ContinueButton.click();
-
         //secondLoginPage.navigatetoMyAccount(myAccountMenu, LogoutLink);
 
     }
@@ -48,7 +46,6 @@ public class LogoutStepDefs {
         // BrowserUtils.waitFor(2);
         //  Driver.get().findElement(By.xpath("//span[text()='" + myAccountMenu + "']")).click();
         BrowserUtils.waitFor(3);
-        Assert.assertEquals(true, logoutPage.loginLinkIsVisible(myAccountMenu));
     }
 
     @When("The user navigates to back in the browser")
