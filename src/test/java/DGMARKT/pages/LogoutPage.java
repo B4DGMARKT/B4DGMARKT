@@ -16,6 +16,7 @@ public class LogoutPage extends BasePage {
     @FindBy(xpath = "//h2[text()='Account Logout']")
     public WebElement LogoutText;
 
+
     @FindBy(xpath = "(//span[text()='Continue'])[2]")
     public WebElement ContinueButton;
 
