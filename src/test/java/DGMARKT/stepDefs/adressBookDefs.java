@@ -111,4 +111,23 @@ public class adressBookDefs {
         String addedText = addressBookPage.addressWarningMessage.getText();
         Assert.assertTrue(string.contains(addedText));
     }
+
+
+    @And("The user types a address  on Address field {string}")
+    public void theUserTypesAAddressOnAddressFieldAddress(String string) {
+        addressBookPage.adressfield(string);
+    }
+
+    @And("The user types a city name on City field {string}")
+    public void theUserTypesACityNameOnCityFieldCity(String string) {
+        addressBookPage.cityfield(string);
+    }
+
+    @Then("The user should be able to see  written {string} on down of City field.")
+    public void theUserShouldBeAbleToSeeWrittenOnDownOfCityField(String string) {
+        String addedText = addressBookPage.cityWarningMessage.getText();
+        Assert.assertTrue(string.contains(addedText));
+    }
+
+
 }

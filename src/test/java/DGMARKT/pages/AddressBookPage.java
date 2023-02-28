@@ -32,8 +32,11 @@ public class AddressBookPage extends BasePage {
     public WebElement continueButton;
     @FindBy(xpath = "//*[text()=\" Your address has been successfully added\"]")
     public WebElement adressAddedTitle;
-    @FindBy(xpath = "//div[@class='text-danger']")
+    @FindBy(css = "fieldset > div:nth-of-type(4) .text-danger")
     public WebElement addressWarningMessage;
+    @FindBy(css = "fieldset > div:nth-of-type(6) .text-danger")
+    public WebElement cityWarningMessage;
+
 
     public void firstNameField(String text){
         firstNameField.sendKeys(text);
