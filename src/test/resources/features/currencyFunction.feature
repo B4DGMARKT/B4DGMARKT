@@ -1,6 +1,6 @@
 Feature: Currency Functionality of Dgmarkt
 
-  @cur
+  @B4DGMAUT-35
   Scenario Outline: Verify that the currency selected by the user matches the currency on the products
     Given The user navigates to "My Account" module "Login" tab  and user should be logged and on the dashboard page
     When The user changes the "<currency type>"
@@ -13,7 +13,7 @@ Feature: Currency Functionality of Dgmarkt
       | £ Pound Sterling | £104.13                |
       | $ US Dollar      | $170.00                |
 
-  @cur
+  @B4DGMAUT-36
   Scenario Outline: Verify that the user is able to complete their purchase with the currency of their choice
     Given The user navigates to "My Account" module "Login" tab  and user should be logged and on the dashboard page
     When The user changes the "<currency type>"
