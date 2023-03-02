@@ -17,7 +17,7 @@ Feature: Currency Functionality of Dgmarkt
   Scenario Outline: Verify that the user is able to complete their purchase with the currency of their choice
     Given The user navigates to "My Account" module "Login" tab  and user should be logged and on the dashboard page
     When The user changes the "<currency type>"
-    And The user selects the "BaByliss 3663U - Hair rollers" product
+    And The user selects the "Capsule Plate 6pcs" product
     And The user adds to cart the selected product
     Then The user should be able to see the "shopping cart" message
     When The user navigates to the " Checkout" menu

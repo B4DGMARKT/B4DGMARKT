@@ -68,6 +68,7 @@ public class CheckoutPage extends BasePage {
         existingAddressForDelivery.click();
         continueBtnForDeliveryDetails.click();
         WebElement deliveryMethodMenu = Driver.get().findElement(By.xpath("//a[contains(text(),'Step 4: " + deliveryMethod + "')]"));
+        BrowserUtils.waitForClickablility(deliveryMethodMenu, 10);
         deliveryMethodMenu.click();
         deliveryMethodMenu.click();
         flatShipping.click();
@@ -87,5 +88,4 @@ public class CheckoutPage extends BasePage {
     public String orderSuccess() {
         return Driver.get().findElement(By.xpath("//h1[text()='Your order has been placed!']")).getText();
     }
-
 }
