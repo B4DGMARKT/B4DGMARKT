@@ -88,5 +88,4 @@ public class CheckoutPage extends BasePage {
     public String orderSuccess() {
         return Driver.get().findElement(By.xpath("//h1[text()='Your order has been placed!']")).getText();
     }
-
 }
