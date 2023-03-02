@@ -1,5 +1,6 @@
 package DGMARKT.stepDefs;
 
+
 import DGMARKT.pages.BasePage;
 import DGMARKT.pages.WishListPage;
 import io.cucumber.java.en.Then;
@@ -21,5 +22,6 @@ wishListPage.wishListIcon.click();
         String actualText = "Your wish list is empty.";
         Assert.assertEquals(expectedText, actualText);
     }
+
 
 }
